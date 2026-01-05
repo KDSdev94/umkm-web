@@ -13,16 +13,16 @@ const socialMediaIcons = [
 
 export const HeroSection = (): JSX.Element => {
   return (
-    <section className="relative w-full min-h-[700px] lg:min-h-[850px] bg-[#e6e6e6] overflow-hidden">
+    <section className="relative w-full min-h-[550px] lg:min-h-[650px] bg-[#e6e6e6] overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <img
-          className="absolute top-[291px] left-0 w-[434px] h-auto object-cover opacity-50 lg:opacity-100"
+          className="absolute top-[100px] left-0 w-[434px] h-auto object-cover opacity-50 lg:opacity-100"
           alt="Top view mix"
           src="/figmaAssets/top-view-mix-vegetables-cutting-board-bowl-with-copy-space-1.png"
         />
 
-        <div className="absolute top-0 right-0 w-[40%] lg:w-[591px] h-[701px]">
+        <div className="absolute top-0 right-0 w-[40%] lg:w-[591px] h-[550px]">
           <img
             className="w-full h-full object-cover"
             alt="Rectangle"
@@ -30,7 +30,7 @@ export const HeroSection = (): JSX.Element => {
           />
         </div>
 
-        <div className="absolute top-[116px] right-[10%] lg:right-[289px] w-[300px] lg:w-[469px] h-auto aspect-square">
+        <div className="absolute top-[20px] right-[10%] lg:right-[289px] w-[300px] lg:w-[469px] h-auto aspect-square">
           <img
             className="w-full h-full object-contain"
             alt="Ellipse"
@@ -38,7 +38,7 @@ export const HeroSection = (): JSX.Element => {
           />
         </div>
 
-        <div className="absolute top-[135px] right-[12%] lg:right-[308px] w-[270px] lg:w-[430px] h-auto aspect-square">
+        <div className="absolute top-[40px] right-[12%] lg:right-[308px] w-[270px] lg:w-[430px] h-auto aspect-square">
           <img
             className="w-full h-full object-contain"
             alt="Ellipse"
@@ -46,7 +46,7 @@ export const HeroSection = (): JSX.Element => {
           />
         </div>
 
-        <div className="absolute top-[167px] right-[15%] lg:right-[355px] w-[230px] lg:w-[364px] h-auto aspect-square">
+        <div className="absolute top-[60px] right-[15%] lg:right-[355px] w-[230px] lg:w-[364px] h-auto aspect-square">
           <div className="w-full h-full rounded-full border-[15px] border-black overflow-hidden shadow-2xl">
             <img
               className="w-full h-full object-cover"
@@ -103,7 +103,7 @@ export const HeroSection = (): JSX.Element => {
         </header>
 
         {/* Hero Content */}
-        <div className="flex flex-col pt-20 lg:pt-[180px]">
+        <div className="flex flex-col pt-8 lg:pt-[40px]">
           <div className="max-w-[648px]">
             <h2 className="[font-family:'Inter',Helvetica] font-medium text-black text-xl lg:text-[28px] tracking-[2px] leading-tight opacity-80">
               MAKANAN KHAS

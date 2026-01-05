@@ -1,6 +1,6 @@
 export const AboutUsSection = (): JSX.Element => {
   return (
-    <section className="relative w-full pt-12 pb-24 bg-[#e6e6e6]">
+    <section className="relative w-full pt-4 pb-24 bg-[#e6e6e6]">
       <div className="container mx-auto px-6 lg:px-[69px]">
         <div className="flex flex-col items-center">
           <h2 className="font-extrabold text-black text-3xl lg:text-[32px] tracking-[2.88px] leading-normal mb-16 [font-family:'Inter',Helvetica]">
