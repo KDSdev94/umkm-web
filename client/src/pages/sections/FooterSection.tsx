@@ -1,75 +1,141 @@
-import { Card, CardContent } from "@/components/ui/card";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  TwitterIcon,
+  YoutubeIcon,
+} from "lucide-react";
 
-const testimonials = [
+const quickLinks1 = [
+  { label: "Home", href: "#" },
+  { label: "Menu", href: "#" },
+  { label: "About", href: "#" },
+  { label: "Contact", href: "#" },
+];
+
+const quickLinks2 = [
+  { label: "FAQ'S", href: "#" },
+  { label: "Terms & Conditions", href: "#" },
+  { label: "Privacy Policy", href: "#" },
+  { label: "Support", href: "#" },
+];
+
+const socialLinks = [
   {
-    image: "/figmaAssets/rectangle-10.png",
-    avatar: "/figmaAssets/ellipse-6.png",
-    text: "Kuah kacangnya begitu lezat dan sayuran segarnya memberikan sentuhan yang sempurna.",
-    rating: 5,
+    icon: InstagramIcon,
+    alt: "Instagram",
+    src: "/figmaAssets/instagram-1.png",
   },
+  { icon: FacebookIcon, alt: "Facebook", src: "/figmaAssets/facebook-1.png" },
   {
-    image: "/figmaAssets/rectangle-10-1.png",
-    avatar: "/figmaAssets/ellipse-6-1.png",
-    text: "Daging sapinya sangat lembut dan bumbu marinadenya sungguh enak.",
-    rating: 5,
+    icon: TwitterIcon,
+    alt: "TwitterIcon x",
+    src: "/figmaAssets/twitterx-1.png",
   },
+  { icon: YoutubeIcon, alt: "You tube", src: "/figmaAssets/youtube-1.png" },
 ];
 
 export const FooterSection = (): JSX.Element => {
   return (
-    <section className="w-full py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="[font-family:'Inter',Helvetica] font-extrabold text-black text-[32px] tracking-[2.88px] leading-[normal] text-center mb-[86px]">
-          WHAT CUSTOMER SAY
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[1105px] mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="flex flex-col items-center">
-              <div className="relative w-full max-w-[538px]">
-                <img
-                  className="w-full h-[372px] object-cover rounded-lg"
-                  alt="Food"
-                  src={testimonial.image}
-                />
-
-                <Card className="absolute bottom-[-64px] left-1/2 -translate-x-1/2 w-[372px] bg-white rounded-[20px] shadow-[0px_4px_4px_#00000040] border-0">
-                  <CardContent className="pt-[54px] pb-6 px-6">
-                    <div className="flex justify-center mb-[22px]">
-                      <div className="flex gap-2.5">
-                        {Array.from({ length: testimonial.rating }).map(
-                          (_, starIndex) => (
-                            <img
-                              key={starIndex}
-                              className="w-[16.17px] h-[15.38px]"
-                              alt="Star"
-                              src="/figmaAssets/star-11.svg"
-                            />
-                          ),
-                        )}
-                      </div>
-                    </div>
-
-                    <p className="[font-family:'Inter',Helvetica] font-medium text-black text-base text-center tracking-[1.44px] leading-[normal]">
-                      {testimonial.text}
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <div className="absolute top-[223px] left-1/2 -translate-x-1/2 w-[91px] h-[91px] bg-white rounded-[45.5px] flex items-center justify-center">
-                  <img
-                    className="w-[79px] h-[79px] rounded-full object-cover"
-                    alt="Customer"
-                    src={testimonial.avatar}
-                  />
-                </div>
+    <footer className="relative w-full bg-[#211f21] py-20 px-6 lg:px-[75px]">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-[72px]">
+          {/* Logo and Description */}
+          <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-1">
+              <div className="[font-family:'Jockey_One',Helvetica] font-normal text-5xl lg:text-[64px] tracking-[0] leading-tight">
+                <span className="text-white">MK</span>
+                <span className="text-[#ff7324]">B</span>
               </div>
-
-              <div className="h-[64px]"></div>
+              <div className="flex gap-1">
+                <span className="[font-family:'Inter',Helvetica] font-normal text-white text-sm lg:text-base tracking-[1.28px]">
+                  MAKANAN KHAS
+                </span>
+                <span className="[font-family:'Inter',Helvetica] font-semibold text-[#ff7325] text-sm lg:text-base">
+                  BLITAR
+                </span>
+              </div>
             </div>
-          ))}
+
+            <p className="max-w-[457px] [font-family:'Karla',Helvetica] font-normal text-white/80 text-base lg:text-lg tracking-[1px] leading-relaxed">
+              Menawarkan beragam masakan yang mewakili cita rasa dan budaya
+              kuliner Blitar, restoran ini merupakan destinasi kuliner yang
+              menarik bagi pecinta masakan tradisional Indonesia.
+            </p>
+
+            <div className="flex items-center gap-6 mt-2">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href="#"
+                  className="w-5 h-5 hover:opacity-80 transition-opacity"
+                >
+                  <img
+                    className="w-5 h-5 invert"
+                    alt={social.alt}
+                    src={social.src}
+                  />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick Links 1 */}
+          <nav className="flex flex-col gap-4 lg:gap-[15px]">
+            <h3 className="[font-family:'Inter',Helvetica] font-semibold text-white text-xl lg:text-2xl tracking-[2px] mb-6 lg:mb-[38px]">
+              Quick Link
+            </h3>
+            {quickLinks1.map((link, index) => (
+              <a
+                key={index}
+                href={link.href}
+                className="[font-family:'Inter',Helvetica] font-normal text-white/70 text-lg lg:text-xl tracking-[1.80px] hover:text-[#ff7325] transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+
+          {/* Quick Links 2 */}
+          <nav className="flex flex-col gap-4 lg:gap-[15px]">
+            <h3 className="[font-family:'Inter',Helvetica] font-semibold text-white text-xl lg:text-2xl tracking-[2px] mb-6 lg:mb-[38px]">
+              Quick Link
+            </h3>
+            {quickLinks2.map((link, index) => (
+              <a
+                key={index}
+                href={link.href}
+                className="[font-family:'Inter',Helvetica] font-normal text-white/70 text-lg lg:text-xl tracking-[1.80px] hover:text-[#ff7325] transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+
+          {/* Contact Us */}
+          <div className="flex flex-col gap-4 lg:gap-[11px]">
+            <h3 className="[font-family:'Inter',Helvetica] font-semibold text-white text-xl lg:text-2xl tracking-[2px] mb-6 lg:mb-[42px]">
+              Contact Us
+            </h3>
+            <address className="not-italic flex flex-col gap-4 lg:gap-[11px]">
+              <p className="[font-family:'Inter',Helvetica] font-normal text-white/70 text-lg lg:text-xl tracking-[1.80px]">
+                Jln. Jendral Sudirman Nomor 12 Plumpungrejo
+              </p>
+              <a
+                href="tel:+6285785914859"
+                className="[font-family:'Inter',Helvetica] font-normal text-white/70 text-lg lg:text-xl tracking-[1.80px] hover:text-[#ff7325] transition-colors"
+              >
+                +62-857-8591-4859
+              </a>
+              <a
+                href="mailto:mkbblitar@gmail.com"
+                className="[font-family:'Inter',Helvetica] font-normal text-white/70 text-lg lg:text-xl tracking-[1.80px] hover:text-[#ff7325] transition-colors"
+              >
+                mkbblitar@gmail.com
+              </a>
+            </address>
+          </div>
         </div>
       </div>
-    </section>
+    </footer>
   );
 };

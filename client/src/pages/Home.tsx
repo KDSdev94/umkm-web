@@ -1,5 +1,5 @@
 import { AboutUsSection } from "./sections/AboutUsSection";
-import { CustomerTestimonialsSection } from "./sections/CustomerTestimonialsSection";
+import { TestimonialsSection } from "./sections/TestimonialsSection";
 import { DiscountCallToActionSection } from "./sections/DiscountCallToActionSection";
 import { FooterSection } from "./sections/FooterSection";
 import { HeroSection } from "./sections/HeroSection";
@@ -8,14 +8,14 @@ import { MenuItemsSection } from "./sections/MenuItemsSection";
 
 export const Home = (): JSX.Element => {
   return (
-    <div className="bg-[#e6e6e6] w-full min-w-[1440px] relative">
+    <div className="bg-[#e6e6e6] w-full overflow-x-hidden">
       <HeroSection />
       <AboutUsSection />
       <MenuItemsSection />
       <HowToOrderSection />
-      <FooterSection />
+      <TestimonialsSection />
       <DiscountCallToActionSection />
-      <CustomerTestimonialsSection />
+      <FooterSection />
     </div>
   );
 };
